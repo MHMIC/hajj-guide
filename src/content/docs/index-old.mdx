@@ -1,0 +1,36 @@
+---
+title: Hajj Guide
+description: The Hajj Manual - A Practical Guide for the Modern Pilgrim
+template: splash
+hero:
+  tagline: بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيْمِ
+  image:
+    file: ../../assets/kabah.png
+  actions:
+    - text: Introduction
+      link: /guide/introduction/
+      icon: right-arrow
+    - text: Buy book
+      link: https://hajj.mhmic.org
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid stagger>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+</CardGrid>
