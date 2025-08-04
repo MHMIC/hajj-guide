@@ -1,5 +1,5 @@
 ---
-const { arabic, translation, source } = Astro.props;
+const { arabic, transliteration, translation, source, sourceLink } = Astro.props;
 ---
 
 <blockquote
@@ -9,14 +9,15 @@ const { arabic, translation, source } = Astro.props;
     arabic && (
       <p
         dir="rtl"
-        style="text-align: right; font-size: 1.5rem; font-family: 'Amiri Quran', serif; margin-bottom: 0.5rem;"
+        style="text-align: right; line-height: 2.4em; font-size: 1.5rem; font-family: 'Amiri Quran', serif; margin-bottom: 0.5rem;"
       >
         {arabic}
       </p>
     )
   }
+  <p style="font-style: italic; font-size: 0.95rem;">{transliteration}</p>
   <p style="font-style: italic; font-size: 0.95rem;">{translation}</p>
   <footer style="margin-top: 0.5rem; font-size: 0.75rem; color: #666;">
-    — {source}
+    <a href={sourceLink} target="_blank" rel="noopener noreferrer">— {source}</a>
   </footer>
 </blockquote>

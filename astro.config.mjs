@@ -4,9 +4,12 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://hajjfocus.com",
   integrations: [
     starlight({
-      title: "Hajj Guide",
+      title: "Hajjfocus.com | Hajj Guide",
+      description:
+        "A comprehensive guide to performing Hajj, including rituals, duas, and practical tips.",
       customCss: [
         // Fontsource files for to regular and semi-bold font weights.
         "@fontsource/eb-garamond",
@@ -27,7 +30,19 @@ export default defineConfig({
           items: [
             { slug: "guide/before-you-go" },
             { slug: "guide/mindset" },
+            { slug: "guide/types-of-hajj" },
             { slug: "guide/umrah" },
+            {
+              label: "Acts of Worship",
+              items: [
+                { slug: "guide/acts-of-worship/ihram" },
+                { slug: "guide/acts-of-worship/tawaf" },
+                { slug: "guide/acts-of-worship/saee" },
+                { slug: "guide/acts-of-worship/rami" },
+                { slug: "guide/acts-of-worship/halq" },
+                { slug: "guide/acts-of-worship/hadi" },
+              ],
+            },
             {
               label: "Step-by-Step Hajj",
               items: [
@@ -38,6 +53,7 @@ export default defineConfig({
               ],
             },
             { slug: "guide/after" },
+            { slug: "guide/visiting-madinah" },
           ],
         },
         {
@@ -45,6 +61,7 @@ export default defineConfig({
           items: [
             { slug: "reference/checklists" },
             { slug: "reference/daywise-checklists" },
+            { slug: "reference/packing-checklists" },
             { slug: "reference/duas" },
             { slug: "reference/faqs" },
             { slug: "reference/glossary" },
